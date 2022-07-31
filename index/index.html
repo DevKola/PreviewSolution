@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        width: 114rem;
+        background-color: #ffeeee;
+      }
+
+      .card-container {
+        margin: 10rem auto;
+        display: flex;
+        gap: 3rem;
+        width: 60rem;
+        height: auto;
+        background-color: #fff;
+        border-radius: 1rem;
+        overflow: hidden;
+      }
+
+      img {
+        width: auto;
+        height: 42rem;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 0rem;
+      }
+
+      .perfume {
+        font-size: 1.3rem;
+        color: #898c99;
+        text-transform: uppercase;
+        letter-spacing: 0.9rem;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .info h1 {
+        font-size: 3rem;
+        width: 80%;
+        font-family: "Fraunces", sans-serif;
+        color: #1c232b;
+        line-height: 1;
+      }
+
+      .text {
+        width: 90%;
+        font-size: 1.4rem;
+        color: #898c99;
+        line-height: 1.9;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .price {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .price-one {
+        font-size: 2.8rem;
+        font-family: "Fraunces", sans-serif;
+        color: #3c8067;
+        font-weight: 700;
+      }
+
+      .price-two {
+        text-decoration: line-through;
+        font-size: 1.4rem;
+        color: #898c99;
+      }
+
+      .info button {
+        display: flex;
+        justify-content: center;
+        gap: 0.6rem;
+        width: 90%;
+        padding: 1.5rem 2rem;
+        font-size: 1.4rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        border: none;
+        background-color: #3f9274;
+        color: #fff;
+        border-radius: 1.2rem;
+        cursor: pointer;
+      }
+
+      .info button:hover {
+        background-color: #194838;
+      }
+
+      .icon {
+        stroke: #fff;
+        
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      /**********************/
+      /* Phone Screen (Smaller than 375px*/
+      /*********************/
+      @media (max-width: 24em ) {
+        .card-container {
+          flex-direction: column;
+          width: 35rem;
+        
+        }
+
+        img {
+          background-size: cover;
+          width: auto;
+          height: 30rem;
+        }
+
+        .info {
+          margin-left: 3.5rem;
+        }
+
+        .info h1 {
+          width: 95%
+        }
+
+        .text {
+          width: 95%;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <img
+        src="/product-preview-card-component-main/images/image-product-desktop.jpg"
+        alt=""
+      />
+
+      <div class="info">
+        <p class="perfume">Perfume</p>
+
+        <h1>Gabrielle Eseence Eau De Parfume</h1>
+
+        <p class="text">
+          A floral, solar and voluptuos interpretation composed by Oliver Polge,
+          Perfume-Creator for the House of CHANNEL.
+        </p>
+
+        <div class="price">
+          <p class="price-one">$149.99</p>
+          <p class="price-two">$169.99</p>
+        </div>
+
+        <button>
+          <ion-icon name="cart-outline" class="icon"></ion-icon>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
